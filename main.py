@@ -1,17 +1,22 @@
 '''
     History Generator by Ben Buchanan (2018)
 '''
+
+import random
+
+# Generates a name
 def GenerateName():
-    print("This is the function that will generate a random name.")
+    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+    vowels = ['a', 'e', 'i', 'o', 'u']
+
     print("Generating name...")
-    name = "Name generated!"
+    name = random.choice(consonants) + random.choice(vowels) + random.choice(consonants) + random.choice(consonants) + random.choice(vowels) + random.choice(consonants)
 
     return name
 
 def main():
-    print("This is the main file of the project.")
     name = GenerateName()
-    print(name)
+    print("Name: " + name)
 
     return
 
